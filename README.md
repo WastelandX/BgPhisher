@@ -2,11 +2,11 @@
 
 <div align="center">
 
-![GitHub](https://img.shields.io/badge/Educational-Purpose-blue)
+![GitHub](https://img.shields.io/
 ![License](https://img.shields.io/badge/License-Educational_Use-green)
 ![Python](https://img.shields.io/badge/Python-3.8+-yellow)
 ![Flask](https://img.shields.io/badge/Flask-2.3+-lightgrey)
-![Platform](https://img.shields.io/badge/Platform-Termux%2FLinux-orange)
+o/badge/Platform-Termux%2FLinux-orange)
 
 **⚠️ FOR EDUCATIONAL PURPOSES AND AUTHORIZED SECURITY TESTING ONLY ⚠️**
 
