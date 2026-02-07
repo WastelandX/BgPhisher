@@ -1,4 +1,4 @@
-# 🔐 BgPhisher - Blockman GO Security Education Tool
+# 🔐 BgPhisher - Security testing  Tool
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 ## 🚨 **CRITICAL LEGAL DISCLAIMER**
 
-> **IMPORTANT:** This tool is provided **STRICTLY FOR EDUCATIONAL PURPOSES** and **AUTHORIZED SECURITY TESTING** only. Unauthorized use of this tool against systems you do not own or have explicit permission to test is **ILLEGAL** and may result in severe legal consequences.
+> **IMPORTANT:** The Author is not responsible for any misuse. This tool is provided **STRICTLY FOR EDUCATIONAL PURPOSES** and **AUTHORIZED SECURITY TESTING** only. Unauthorized use of this tool against systems you do not own or have explicit permission to test is **ILLEGAL** and may result in severe legal consequences.
 
 ### **YOU ARE RESPONSIBLE FOR YOUR ACTIONS**
 - Use only on systems you own or have **written permission** to test
