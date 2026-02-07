@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}BLOCKMAN GO{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Flash Messages -->
@@ -15,9 +14,8 @@
             <div class="flash-container">
                 {% for category, message in messages %}
                     <div class="flash-message flash-{{ category }}">
-                        <i class="fas fa-{% if category == 'success' %}check-circle{% else %}exclamation-circle{% endif %}"></i>
                         {{ message }}
-                        <button class="flash-close">&times;</button>
+                        <button class="flash-close" onclick="this.parentElement.remove()">×</button>
                     </div>
                 {% endfor %}
             </div>
@@ -27,17 +25,54 @@
     <!-- Main Content -->
     {% block content %}{% endblock %}
 
-    <!-- Loading Overlay -->
-    <div id="loading" class="loading-overlay">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">Processing...</div>
+    <!-- Simple Loading Overlay -->
+    <div id="loading" style="
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(255,255,255,0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    ">
+        <div style="text-align: center;">
+            <div style="
+                width: 50px; height: 50px;
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #1e90ff;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 15px;
+            "></div>
+            <div>Loading...</div>
+        </div>
     </div>
 
-    <!-- Notification Container -->
-    <div id="notification-container"></div>
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 
-    <!-- Global Script -->
-    <script src="{{ url_for('static', filename='auth.js') }}"></script>
-    {% block scripts %}{% endblock %}
+    <script>
+        // Show/hide loading overlay
+        function showLoading() {
+            document.getElementById('loading').style.display = 'flex';
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        // Auto-remove flash messages after 5 seconds
+        setTimeout(() => {
+            document.querySelectorAll('.flash-message').forEach(msg => {
+                msg.style.opacity = '0';
+                setTimeout(() => msg.remove(), 300);
+            });
+        }, 5000);
+    </script>
 </body>
 </html>
