@@ -70,8 +70,9 @@
 ### **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/BgPhisher.git
+git clone https://github.com/WastelandX/BgPhisher.git
 cd BgPhisher
 
 # Install required package
 pip install -r requirements.txt
+python BgPhisher.py
