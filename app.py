@@ -94,27 +94,20 @@ setTimeout(()=>showAlert('Welcome to Admin Panel v2.1','warning'),1000);
 def print_logo():
     """Print colored logo"""
     print(Fore.YELLOW + r'''
-This tool was made by WastelandX. The author is not responsible for the misuse of this tool, use at your own risk.'' + Fore.RESET)
+This tool made by WastelandX. The author is not responsible for any misuse. Use it at your own risk.
+    ''' + Fore.RESET)
     
-    print(Fore.CYAN + ''' ____  _                   ____  _     _     _           
-| __ )| | __ _  ___  _ __ |  _ \| |__ (_)___| |__   ___  
-|  _ \| |/ _` |/ _ \| '_ \| |_) | '_ \| / __| '_ \ / _ \ 
-| |_) | | (_| | (_) | | | |  __/| | | | \__ \ | | | (_) |
-|____/|_|\__, |\___/|_| |_|_|   |_| |_|_|___/_| |_|\___/ 
-         |___/                                            
-   ____  _     _ _       _     _                          
-  |  _ \| |__ (_) |__   (_)___| |__   ___ _ __ ___        
-  | |_) | '_ \| | '_ \  | / __| '_ \ / _ \ '_ ` _ \       
-  |  __/| | | | | | | | | \__ \ | | |  __/ | | | | |      
-  |_|   |_| |_|_|_| |_| |_|___/_| |_|\___|_| |_| |_|      ''' + Fore.RESET)
+    print(Fore.CYAN + r'''
+|Author: WastelandX| GitHub: https://github.com/WastelandX/BgPhisher
+    ''' + Fore.RESET)
 
 def print_banner():
     """Print colored banner"""
     print(Fore.MAGENTA + Style.BRIGHT + "═" * 60)
     print(Fore.RED + "🔥 BLOCKMAN GO Phisher v2.1 🔥".center(60))
     print(Fore.MAGENTA + "═" * 60)
-    print(Fore.YELLOW + "✨ Phisher for well known BLOCKMAN GO.")
-    print(Fore.CYAN + "💡 Support me on github if you like the tool!")
+    print(Fore.YELLOW + "✨ New Phisher for well known BLOCKMAN GO!")
+    print(Fore.CYAN + "💡 Support us on GitHub if you like the tool!!!")
     print()
     print(Fore.GREEN + "🌐 Panel URL:   " + Fore.WHITE + "http://127.0.0.1:5000")
     print(Fore.GREEN + "📁 Log File:    " + Fore.WHITE + "admin.log")
