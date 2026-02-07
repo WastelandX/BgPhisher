@@ -96,7 +96,7 @@ def print_logo():
     print(Fore.YELLOW + r'''
 This tool was made by WastelandX. The author is not responsible for the misuse of this tool, use at your own risk.'' + Fore.RESET)
     
-    print(Fore.CYAN + r'''
+    print(Fore.CYAN + '''
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃                                                    ┃
 ┃  ░▒▓██████▓▒░  ░▒▓██████▓▒░   ░▒▓██████▓▒░        ┃
