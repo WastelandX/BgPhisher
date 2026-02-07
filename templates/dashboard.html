@@ -1,1 +1,110 @@
-s
+{% extends "base.html" %}
+
+{% block title %}Dashboard - BLOCKMAN GO{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">BLOCKMAN <span>GO</span></span>
+            <span class="user-welcome">Welcome, {{ username }}!</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('dashboard') }}" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#" class="nav-link"><i class="fas fa-user"></i> Profile</a>
+            <a href="#" class="nav-link"><i class="fas fa-gamepad"></i> Games</a>
+            <a href="{{ url_for('logout') }}" class="nav-link logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-content">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-user"></i></div>
+                <div class="stat-info">
+                    <h3>Account Info</h3>
+                    <p><strong>Username:</strong> {{ username }}</p>
+                    <p><strong>Email:</strong> {{ email }}</p>
+                    <p><strong>Member Since:</strong> {{ created[:10] }}</p>
+                    <p><strong>Last Login:</strong> {{ last_login[:19] if last_login else 'First login' }}</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                <div class="stat-info">
+                    <h3>Achievements</h3>
+                    <p><strong>Games Played:</strong> 42</p>
+                    <p><strong>Level:</strong> 15</p>
+                    <p><strong>XP Points:</strong> 1,250</p>
+                    <p><strong>Rank:</strong> #235</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-gamepad"></i></div>
+                <div class="stat-info">
+                    <h3>Quick Actions</h3>
+                    <button class="action-btn"><i class="fas fa-play"></i> Play Now</button>
+                    <button class="action-btn"><i class="fas fa-store"></i> Visit Store</button>
+                    <button class="action-btn"><i class="fas fa-users"></i> Friends</button>
+                    <button class="action-btn"><i class="fas fa-cog"></i> Settings</button>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="stat-info">
+                    <h3>Recent Activity</h3>
+                    <ul class="activity-list">
+                        <li>🎮 Played "Sky Battle" 2 hours ago</li>
+                        <li>🏆 Unlocked "Speed Runner" achievement</li>
+                        <li>👥 Added 3 new friends</li>
+                        <li>💰 Purchased 500 coins</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="games-section">
+            <h2>Popular Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/667eea/fff?text=SKY+BATTLE" alt="Sky Battle">
+                    <h3>Sky Battle</h3>
+                    <p>Battle royale with building mechanics</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/764ba2/fff?text=BLOCK+RACE" alt="Block Race">
+                    <h3>Block Race</h3>
+                    <p>High-speed racing with obstacles</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/1e90ff/fff?text=TOWER+DEFENSE" alt="Tower Defense">
+                    <h3>Tower Defense</h3>
+                    <p>Strategic tower defense game</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Dashboard specific scripts
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate stat cards on load
+        const cards = document.querySelectorAll('.stat-card');
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    });
+</script>
+{% endblock %}
