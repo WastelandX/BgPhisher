@@ -29,7 +29,7 @@ print(f"""{Colors.O}
 ║ {Colors.Y}{Colors.BD}██████╔╝╚██████╗╚██████╔╝██║███████║██║{Colors.O} ║
 ║ {Colors.Y}{Colors.BD}╚═════╝  ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚═╝{Colors.O} ║
 ║                                                      ║
-║     {Colors.C}{Colors.BD}Blockman GO Phishing Toolkit{Colors.E}{Colors.O}         ║
+║     {Colors.C}{Colors.BD}Blockman GO Phisher. Author~ Act|WastelandX. Colors.E}{Colors.O}         ║
 ║     {Colors.W}{Colors.BD}fake identity:XnoneGC.AdminPanel{Colors.E}{Colors.O}       ║
 ╚══════════════════════════════════════════════════════╝{Colors.E}
 """)
